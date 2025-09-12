@@ -41,13 +41,13 @@ Chat via web: Say "I'm depressed" for responses. View dashboard for insights.
 ##Contributing
 
 Fork, branch, commit, PR. Follow code of conduct.
-
-##Ethics & Privacy
+Ethics & Privacy
 For support only—seek pros for issues. Data stays local.
 
 ##Contact
 
 Project Lead: Sanjay Suthar (@branStrak on GitHub,@hamesha_sanjay on X)
+
 Member : Jay Trivedi (@JayTrivedi18 on GitHub)
 Email: sutharsanju1435@gmail.com
 

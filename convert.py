@@ -1,3 +1,6 @@
+#This script converts the mental health conversational dataset into a format suitable for AutoTrain.
+#It reads the original CSV, cleans it, and saves a new CSV with 'instruction', 'input', and 'output' columns.
+
 import pandas as pd
 
 input_file = "./mental_health_conversational_dataset.csv"

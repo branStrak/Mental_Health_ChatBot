@@ -49,6 +49,7 @@ For support only—seek pros for issues. Data stays local.
 Project Lead: Sanjay Suthar (@branStrak on GitHub,@hamesha_sanjay on X)
 
 Member : Jay Trivedi (@JayTrivedi18 on GitHub)
+
 Email: sutharsanju1435@gmail.com
 
 Star ⭐ this repo if it helps your wellness journey! Let's build a kinder world together. 🌟

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - MannTalk</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <style>
+    /* Additional styles for the FAQ accordion */
+   /* FAQ Section */
+.faq-container {
+  max-width: 800px;
+  margin: 5rem auto;
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* header {
+  background: var(--foreground);
+} */
+
+.faq-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--foreground);
+}
+
+.faq-item {
+  margin-bottom: 1.25rem;
+}
+
+.faq-question {
+  cursor: pointer;
+  background: var(--secondary);
+  padding: 1rem;
+  margin: 0;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  transition: background-color 0.2s;
+}
+
+.faq-question:hover {
+  background: var(--muted);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  background: var(--card);
+  padding: 0 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: var(--foreground);
+}
+
+.faq-answer p {
+  margin: 1rem 0;
+}
+
+.faq-answer.active {
+  max-height: 500px;
+  padding: 1rem;
+}
+  </style>
+  <script>
+    // Accordion functionality for FAQ items
+    document.addEventListener("DOMContentLoaded", function () {
+      const questions = document.querySelectorAll(".faq-question");
+      questions.forEach((question) => {
+        question.addEventListener("click", function () {
+          const answer = this.nextElementSibling;
+          answer.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="app">
+    <!-- Navigation (Same as Index Page) -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo">
+            <span class="logo-icon">
+              <i class="fa-solid fa-brain"></i>
+            </span>
+            <div class="logo-text">MannTalk</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <button id="theme-toggle" class="theme-button">
+            <i class="fa-solid fa-moon"></i>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+          <a href="/">Home</a>
+          <a href="/aboutus">About</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/contact">Contact Us</a>
+          <button id="sign-in-btn" class="btn btn-outline">Sign In</button>
+          <button class="btn btn-primary sign-up-btn">Sign Up</button>
+          <button id="sign-out-btn" class="btn btn-outline" style="display: none;">Sign Out</button>
+          <!-- Profile Button -->
+          <button id="profile-btn" class="btn btn-outline">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- FAQ Section -->
+    <div class="faq-container" id="faq">
+      <h1>Frequently Asked Questions</h1>
+      
+      <div class="faq-item">
+        <div class="faq-question">What is MannTalk?</div>
+        <div class="faq-answer">
+          <p>
+            MannTalk is an AI-powered mental health chatbot designed to offer 24/7 support, reliable guidance, and compassionate care to help you manage your mental health and overall well-being.
+          </p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How secure and private is my data?</div>
+        <div class="faq-answer">
+          <p>
+            Your privacy is our top priority. All conversations with MannTalk are fully encrypted and confidential. We strictly follow privacy guidelines and consistently update our security measures.
+          </p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I talk to a human instead?</div>
+        <div class="faq-answer">
+          <p>
+            Currently, MannTalk is fully powered by advanced artificial intelligence designed to simulate empathetic conversation. However, we continually explore ways to integrate human support when extra assistance is needed.
+          </p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">What types of support does MannTalk provide?</div>
+        <div class="faq-answer">
+          <p>
+            MannTalk offers emotional support, stress reduction techniques, mindfulness exercises, and advice on coping strategies. Our aim is to empower you to feel heard and to assist you in managing your mental well-being.
+          </p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do I start a chat with MannTalk?</div>
+        <div class="faq-answer">
+          <p>
+            Simply click the "Start Chat" button found on any page. This will open our interactive chat window where you can begin your conversation with MannTalk instantly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (Same as Index Page) -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo">
+                <span class="logo-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </span>
+                <div class="logo-text">MannTalk</div>
+              </div>
+            </div>
+            <p>Your trusted companion for mental well-being.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/aboutus">About</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/contact">Contact</a></li>
+              
+            </ul>
+          </div>
+          
+          <div class="footer-emergency">
+            <h4>Emergency</h4>
+            <p>If you're in crisis, please contact:</p>
+            <p class="emergency-number">988 Suicide &amp; Crisis Lifeline</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 MannTalk. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="profile-modal" class="modal" style="display:none;">
+    <div class="modal-content" id="content">
+      <span class="close-btn">&times;</span>
+      <h2 id="pfp">User Profile</h2>
+      <form id="profile-form">
+        <label>Username:</label>
+        <input type="text" id="username" value="user123" disabled>
+        <label>Email:</label>
+        <input type="email" id="email" value="user@example.com" disabled>
+        <label>Password:</label>
+        <input type="password" id="password" value="******" disabled>
+        <button  id="edit-btn" class="btn btn-primary" type="button">Update</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

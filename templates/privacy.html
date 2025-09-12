@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - MannTalk</title>
+  
+  <!-- Google Fonts for a modern, calming typeface -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+
+
+
+
+/* Privacy Container */
+.privacy-container {
+  max-width: 800px;
+  margin: 3rem auto 6rem auto;
+  background: var(--card);
+  padding: 2.5rem 3rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+
+.privacy-container h1 {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  font-size: 2.5rem;
+  color: var(--foreground);
+}
+
+.privacy-container h2 {
+  margin-top: 1.875rem;
+  font-size: 1.75rem;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3125rem;
+}
+
+.privacy-container p,
+.privacy-container li {
+  font-size: 1.1rem;
+  margin-bottom: 0.9375rem;
+  color: var(--muted-foreground);
+}
+
+.privacy-container ul {
+  margin-left: 1.25rem;
+  list-style-type: disc;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .nav-right {
+    margin: 0.625rem 0 0 0;
+  }
+
+  .footer-links ul {
+    text-align: center;
+  }
+} 
+  </style>
+</head>
+<body>
+  <div class="app">
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo">
+            <span class="logo-icon">
+              <i class="fa-solid fa-brain"></i>
+            </span>
+            <div class="logo-text">MannTalk</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <button id="theme-toggle" class="theme-button">
+            <i class="fa-solid fa-moon"></i>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+          <a href="/">Home</a>
+
+          <a href="/aboutus">About</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/faq">FAQ</a>
+          <button id="sign-in-btn" class="btn btn-outline">Sign In</button>
+          <button class="btn btn-primary sign-up-btn">Sign Up</button>
+          <button id="sign-out-btn" class="btn btn-outline" style="display: none;">Sign Out</button>
+          <!-- Profile Button -->
+          <button id="profile-btn" class="btn btn-outline">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="privacy-container">
+      <h1>Our Promise to Your Privacy</h1>
+      <p>
+        At <strong>MannTalk</strong>, your well-being and trust are at the forefront of our mission.
+        We are dedicated to maintaining a safe, compassionate, and secure online environment.
+        This Privacy Policy outlines how we collect, use, and protect your personal information.
+      </p>
+      
+      <h2>1. What We Collect</h2>
+      <p>We gather information to improve your experience, including:</p>
+      <ul>
+        <li><strong>Account Data:</strong> Personal details such as name, email, phone, and username you provide during registration.</li>
+        <li><strong>Usage Data:</strong> Information on how you interact with our website and chat services.</li>
+        <li><strong>Feedback:</strong> Your inputs, survey responses, and any additional information you choose to share with us.</li>
+      </ul>
+      
+      <h2>2. Use of Your Information</h2>
+      <p>Your data is utilized for:</p>
+      <ul>
+        <li>Personalizing and enhancing your experience with our services.</li>
+        <li>Improving our systems based on data-driven insights.</li>
+        <li>Communicating important updates, support messages, and wellness tips.</li>
+        <li>Maintaining security and operational integrity.</li>
+      </ul>
+      
+      <h2>3. Data Security</h2>
+      <p>
+        We implement state-of-the-art security measures—including encryption and secure servers—to protect your information from unauthorized access, modification, or disclosure.
+      </p>
+      
+      <h2>4. Your Control &amp; Rights</h2>
+      <p>
+        You are empowered to manage your personal data. You can access, update, or request deletion of your information, and opt-out of non-critical data collection.
+      </p>
+      
+      <h2>5. Policy Updates</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Notice of significant changes will be provided through our website or your registered email.
+      </p>
+      
+      <h2>6. Reach Out to Us</h2>
+      <p>For any privacy concerns or questions, please contact us using the details below:</p>
+      <ul>
+        <li><strong>Email:</strong> support@MannTalk.com</li>
+        <li><strong>Phone:</strong> +91 9876543210</li>
+      </ul>
+      <p>
+        Your trust is our asset. We are committed to safeguarding your personal information with the utmost care.
+      </p>
+    </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo">
+                <span class="logo-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </span>
+                <div class="logo-text">MannTalk</div>
+              </div>
+            </div>
+            <p>Your trusted companion for mental well-being.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/aboutus">About</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              
+            </ul>
+          </div>
+         
+          <div class="footer-emergency">
+            <h4>Emergency</h4>
+            <p>If you're in crisis, please contact:</p>
+            <p class="emergency-number">988 Suicide & Crisis Lifeline</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 MannTalk. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="profile-modal" class="modal" style="display:none;">
+    <div class="modal-content" id="content">
+      <span class="close-btn">&times;</span>
+      <h2 id="pfp">User Profile</h2>
+      <form id="profile-form">
+        <label>Username:</label>
+        <input type="text" id="username" value="user123" disabled>
+        <label>Email:</label>
+        <input type="email" id="email" value="user@example.com" disabled>
+        <label>Password:</label>
+        <input type="password" id="password" value="******" disabled>
+        <button  id="edit-btn" class="btn btn-primary" type="button">Update</button>
+       </form>
+    </div>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</body>
+</html>
+
+
+
+
+

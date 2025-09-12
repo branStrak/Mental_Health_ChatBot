@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - MannTalk</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+</head>
+<body>
+  <div class="app">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo">
+            <span class="logo-icon">
+              <i class="fa-solid fa-brain"></i>
+            </span>
+            <div class="logo-text">MannTalk</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <button id="theme-toggle" class="theme-button">
+            <i class="fa-solid fa-moon"></i>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/faq">FAQ</a>
+          <button id="sign-in-btn" class="btn btn-outline">Sign In</button>
+          <button class="btn btn-primary sign-up-btn">Sign Up</button>
+          <button id="sign-out-btn" class="btn btn-outline" style="display: none;">Sign Out</button>
+           <!-- Profile Button -->
+           <button id="profile-btn" class="btn btn-outline">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <!-- Profile Button -->
+         
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main About Section (Peaceful Design) -->
+    <div class="about-section">
+      <div class="about-content">
+        <h1>About MannTalk</h1>
+        <p>
+          At <strong>MannTalk</strong>, our mission is to create a welcoming, safe, and supportive space for mental health.
+          We combine cutting-edge AI technology with heartfelt compassion to empower individuals on their journey to emotional well-being.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+          To remove the stigma associated with mental health, provide confidential support, and guide every individual toward a
+          balanced and fulfilling life.
+        </p>
+        <h2>Our Vision</h2>
+        <p>
+          We envision a world where mental health care is accessible to everyone—a world where empathy and technology unite to create
+          a healthier and more understanding community.
+        </p>
+        <h2>Our Values</h2>
+        <p>
+          We believe in empathy, confidentiality, accessibility, and continuous improvement. Every interaction with MannTalk is driven by
+          our commitment to personalized support and genuine care.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo">
+                <span class="logo-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </span>
+                <div class="logo-text">MannTalk</div>
+              </div>
+            </div>
+            <p>Your trusted companion for mental well-being.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              
+            </ul>
+          </div>
+         
+          <div class="footer-emergency">
+            <h4>Emergency</h4>
+            <p>If you're in crisis, please contact:</p>
+            <p class="emergency-number">988 Suicide &amp; Crisis Lifeline</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 MannTalk. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+ 
+  <div id="profile-modal" class="modal" style="display:none;">
+    <div class="modal-content" id="content">
+      <span class="close-btn">&times;</span>
+      <h2 id="pfp">User Profile</h2>
+      <form id="profile-form">
+        <label>Username:</label>
+        <input type="text" id="username" value="user123" disabled>
+        <label>Email:</label>
+        <input type="email" id="email" value="user@example.com" disabled>
+        <label>Password:</label>
+        <input type="password" id="password" value="******" disabled>
+        <button  id="edit-btn" class="btn btn-primary" type="button">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</body>
+</html>

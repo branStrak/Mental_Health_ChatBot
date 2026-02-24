@@ -9,7 +9,7 @@ bashgit clone https://github.com/yourusername/mental-health-chatbot.git
 cd mental-health-chatbot
 pip install -r requirements.txt
 python app.py
-Visit http://localhost:5000.
+
 
 ##Features
 

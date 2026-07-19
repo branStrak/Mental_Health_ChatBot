@@ -1,4 +1,6 @@
 import datetime
+import os
+from dotenv import load_dotenv
 from flask import Flask, jsonify, render_template, request, session
 from psycopg2 import Error
 from auth import auth_bp, get_db_connection
@@ -6,6 +8,7 @@ from tinyllama import tinyllama_bp
 from gemma import gemma_bp  # Updated import
 from werkzeug.security import generate_password_hash
 
+load_dotenv()
 
 app = Flask(__name__)
 

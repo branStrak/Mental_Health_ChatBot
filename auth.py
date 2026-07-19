@@ -3,19 +3,25 @@ import psycopg2
 from psycopg2 import Error
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import os
+
 auth_bp = Blueprint('auth', __name__)
 
 DB_CONFIG = {
-    'dbname': 'dbname',
+    'dbname': 'MentalHealthDB',
     'user': 'postgres',
-    'password': 'password',
+    'password': '1234',
     'host': 'localhost',
-    'port': '0000'
+    'port': '5432'
 }
 
 def get_db_connection():
     try:
-        connection = psycopg2.connect(**DB_CONFIG)
+        database_url = os.environ.get('DATABASE_URL')
+        if database_url:
+            connection = psycopg2.connect(database_url)
+        else:
+            connection = psycopg2.connect(**DB_CONFIG)
         return connection
     except Error as e:
         print(f"Error connecting to PostgreSQL: {e}")

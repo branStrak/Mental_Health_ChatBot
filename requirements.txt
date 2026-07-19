@@ -1,4 +1,8 @@
 flask
-torch
-transformers
-safetensors
+psycopg2-binary
+werkzeug
+huggingface_hub
+requests
+python-dotenv
+pandas
+gunicorn

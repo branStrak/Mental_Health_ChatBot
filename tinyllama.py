@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 tinyllama_bp = Blueprint('tinyllama', __name__)
 
-HF_TOKEN = os.environ.get("HF_TOKEN", "your_hf_token_here")  # Replace with your actual token
+HF_TOKEN = os.environ.get("HF_TOKEN")
 HF_MODEL_ID = "Sanjay002/tinyllama-mental-health-finetuned"
 API_URL = f"https://api-inference.huggingface.co/models/{HF_MODEL_ID}"
 headers = {"Authorization": f"Bearer {HF_TOKEN}"}

@@ -46,9 +46,13 @@ def clean_response(response_text):
     print(cleaned_output)
     return cleaned_output
 
+import os
+from huggingface_hub import InferenceClient
+
+hf_token = os.environ.get("HF_TOKEN")
 client = InferenceClient(
     provider="nebius",
-    api_key=""  # Replace with your actual API key,
+    api_key=hf_token,
 )
 
 @gemma_bp.route('', methods=['POST']) 

@@ -51,7 +51,7 @@ from huggingface_hub import InferenceClient
 
 hf_token = os.environ.get("HF_TOKEN")
 client = InferenceClient(
-    provider="Featherless AI",
+    provider="featherless-ai",
     api_key=hf_token,
 )
 

@@ -35,6 +35,8 @@ def api_register():
     age = data.get('age')
     password = data.get('password')
     gender = data.get('gender')
+    if gender:
+        gender = gender.capitalize()
 
     if not all([username, email, password]):
         return jsonify({'error': 'Username, email, and password are required'}), 400

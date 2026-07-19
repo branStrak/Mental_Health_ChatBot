@@ -510,6 +510,41 @@
   
   /* Responsive styles */
   @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      height: auto;
+      padding: 0.5rem 0;
+      gap: 0.5rem;
+    }
+    
+    .header-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .chat-input-wrapper {
+      flex-direction: column;
+      padding: 0.5rem;
+    }
+    
+    .input-group {
+      flex-wrap: wrap;
+    }
+    
+    .model-selector {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+
+    .message-bubble {
+      max-width: 95%;
+    }
+
     .sidebar {
       position: fixed;
       top: 4.5rem;

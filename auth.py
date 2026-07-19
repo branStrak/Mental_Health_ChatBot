@@ -65,7 +65,7 @@ def api_register():
                 """,
                 (email,))
                 result=cursor.fetchone()
-                user_id=result
+                user_id=result[0] if result else None
 
                 return jsonify({'message': 'Registration successful', 'user_id': user_id}), 201
             else:

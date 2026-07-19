@@ -76,7 +76,7 @@ def chat():
 
     except Exception as e:
         logger.error(f"Unexpected error: {e}", exc_info=True)
-        return jsonify({'response': 'Internal server error.'}), 500
+        return jsonify({'response': f'Internal server error: {str(e)}'}), 500
 
 @tinyllama_bp.route('/conversations', methods=['POST'])
 def get_conversations():

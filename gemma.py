@@ -87,5 +87,5 @@ def chat_grok():
 
         return jsonify({'response': cleaned_response, 'conversation_id': updated_convo_id}) 
     except Exception as e:
-        return jsonify({'error': f'Failed to get response from model: {str(e)}'}), 500
+        return jsonify({'response': f'Failed to get response from model: {str(e)}'}), 500
 
